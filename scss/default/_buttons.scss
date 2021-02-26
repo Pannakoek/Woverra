@@ -1,0 +1,32 @@
+@import "../functions/shades";
+
+
+@mixin button-style($color, $dark-bg: true) {
+  $background-color: $color;
+  $shade-percentage: 20%;
+  $dark-bg-color: shade($color, $shade-percentage);
+  $text-color: null;
+
+  @if $dark-bg {
+    $text-color: #fff;
+  } @else {
+    $text-color: #000;
+  }
+
+  background-color: $background-color;
+  border: {
+    color: $dark-bg-color;
+    radius: 10px;
+    style: solid;
+    width: 0;
+    bottom-width: 5px;
+  }
+  color: $text-color;
+  padding: 10px;
+
+  &:hover {
+    background-color: $dark-bg-color;
+    border-color: shade($color, $shade-percentage * 2);
+    color: tint($text-color, $shade-percentage);
+  }
+}

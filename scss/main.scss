@@ -1,5 +1,6 @@
-@import "variable/_var.scss";
+@import "variable/var";
+@import "default/buttons";
 
-body {
-  background-color: $primary-color;
+a.btn {
+  @include button-style($primary-color, $dark-bg: true);
 }

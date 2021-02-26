@@ -1,5 +1,17 @@
-body {
-  background-color: #ffde00;
+a.btn {
+  background-color: #ff6600;
+  border-color: #cc5200;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 5px;
+  color: #fff;
+  padding: 10px;
+}
+a.btn:hover {
+  background-color: #cc5200;
+  border-color: #993d00;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
